@@ -10,7 +10,7 @@ const CountChartContainer = async () => {
     _count: true,
   })
   const boys = data.find((b) => b.sex === 'MALE')?._count || 0
-  const girls = data.find((g) => g.sex === 'MALE')?._count || 0
+  const girls = data.find((g) => g.sex === 'FEMALE')?._count || 0
   const boysPercentage = Math.round((boys / (boys + girls)) * 100)
   const girlsPercentage = Math.round((girls / (boys + girls)) * 100)
 

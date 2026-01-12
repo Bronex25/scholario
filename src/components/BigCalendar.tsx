@@ -18,6 +18,16 @@ const BigCalendar = ({
     setView(selectedView)
   }
 
+  const eventPropGetter = () => {
+    return {
+      style: {
+        backgroundColor: '#c3ebfa',
+        color: '#000000',
+        border: 'none',
+      },
+    }
+  }
+
   return (
     <Calendar
       localizer={localizer}
@@ -30,6 +40,7 @@ const BigCalendar = ({
       onView={handleOnChangeView}
       min={new Date(2025, 1, 0, 8, 0, 0)}
       max={new Date(2025, 1, 0, 17, 0, 0)}
+      eventPropGetter={eventPropGetter}
     />
   )
 }
